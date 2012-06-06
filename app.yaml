@@ -1,0 +1,20 @@
+application: somaliconstitution
+version: 2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /res
+  static_dir: res
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /admin/.*
+  script: main.py
+  login: admin
+
+- url: .*
+  script: main.py
+  login: required

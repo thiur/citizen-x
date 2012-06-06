@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+  <script type="text/javascript" src="res/adminutil.js"></script>
+  <div id="admin-content">
+    <h3>Current users</h3>
+    {% for email in current_users_email %}
+      <div class="admin-text">
+        {{email}}
+        <span class="admin-setter" onclick="deleteUser('{{email}}')">
+          Delete User
+          <img class="admin" src="res/trash.png" alt="delete user" />
+        </span>
+      </div>
+      <hr />
+    {% endfor %}
+
+    <div class="admin-text">
+      <input id="admin-email" class="admin" type="text" name="new_user">
+      <span class="admin-setter push-down" onclick=
+          "addUser(document.getElementById('admin-email').value)">
+        Add user
+        <img class="admin" src="res/adduser.png" alt="add user" />
+      </span>
+    </div>
+    <br />
+
+    <h3>Current form key</h3>
+    <div class="admin-text"><span id="form-key">{{ form_key }}</span></div>
+    <hr />
+    <div class="admin-text">
+      <input id="new-form-key" class="admin" type="text" name="new-form-key" />
+      <span class="admin-setter push-down" onclick=
+          "setFormKey(document.getElementById('new-form-key').value)">
+        Update form key
+        <img class="admin" src="res/updateform.png" alt="update form" />
+      </span>
+    </div>
+
+  <h3>Upload Phone numbers</h3>
+  <div class="admin-text">
+    <form action="/admin" method="post" enctype="multipart/form-data">
+      <input id="phone-number-csv" class="admin" type="file" name="phone-number-csv" />
+      <input id="submit" type="submit" class="button" name="submit" />
+    </form>
+  </div>
+
+</div>
+
+  {% if new_user_email %}
+    {{ new_user_email }} has been added to the directory
+  {% endif %}
+{% endblock %}

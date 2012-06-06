@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<script type="text/javascript" src="res/homeutil.js"></script>
+
+<div id="phone">
+  <a id="phone-number" class="button" href="#">
+    <img src="res/phone.png" alt="phone" style="padding-right:8px" />
+    <span id="phone-number-text">Loading</span>
+  </a>
+  <br /><br />
+  <input type="button" class="button" value="Skipped" onclick=
+      "updateNumber('skipped')" /><br />
+  <input type="button" class="button" value="No Pickup" onclick=
+      "updateNumber('nopickup')" /><br />
+  <input type="button" class="button" value="Refused to Answer" onclick=
+      "updateNumber('refusedtoanswer')" /><br />
+</div>
+<div id="bbForm" rel={{ form_key }}>
+  <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey={{ form_key }}"
+      width="575" height="575" frameborder="0" marginheight="0" marginwidth="0"
+      onLoad="formRefresh()">Loading...</iframe>
+</div>
+<div class="clear"></div>
+<script type="text/javascript"/>
+  // Get a new number on page load.
+  getNewNumber();
+</script>
+{% endblock %}
