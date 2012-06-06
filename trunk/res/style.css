@@ -1,0 +1,112 @@
+/*
+ * Copyright 2012 Google Inc. All Rights Reserved.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
+/* CSS used by all the pages. */
+
+body {
+  font-family: Arial,sans-serif;
+  margin: 0;
+}
+
+#header {
+  padding-top: 30px;
+  padding-left: 100px;
+  min-height: 75px;
+}
+
+#content {
+  padding-left: 100px;
+  padding-top: 40px;
+  background-image:url('background.jpg');
+  -webkit-background-size: cover;
+}
+
+#phone {
+  float: left;
+  width: 350px;
+  margin-right: 50px;
+  background-color: #FFFFFF;
+  padding: 16px;
+}
+
+#bbForm {
+  float: left;
+  width: 575px;
+  background-color: #FFFFFF;
+  padding: 16px;
+}
+
+#phone-number {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.button, .ss-form-entry input {
+  color: #ffffff;
+  border: 0;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #4b72b7;
+  text-transform: uppercase;
+  margin: 8px 0 0;
+}
+
+.button:hover {
+  background-color: #5c83c8;
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+}
+
+#admin-content {
+  width: 550px;
+  min-height: 600px;
+}
+
+.admin-text {
+  background-color:rgba(255,255,255,0.4);
+  min-width: 550px;
+  padding: 8px;
+}
+
+.admin-setter {
+  float: right;
+  color: #426cd3;
+}
+
+.admin-setter:hover {
+  color: #5c83c8;
+  cursor: pointer;
+}
+
+img.admin {
+  padding: 0 8px;
+}
+
+input.admin {
+  padding: 4px;
+  width: 300px;
+}
+
+.push-down {
+  padding-top: 8px;
+}
+
+.logout {
+  float: right;
+}
