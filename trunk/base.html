@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Reboot Somalia</title>
+    <link rel="stylesheet" type="text/css" href="res/style.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <img src="res/logo.jpg" alt="Reboot Somalia" />
+      {% if logout_url %}
+        <a href="{{logout_url}}" class="logout">logout</a><br /><br />
+      {% endif %}
+    </div>
+    <div id="content">{% block content %}</div>
+    {% endblock %}
+  </body>
+</html>
